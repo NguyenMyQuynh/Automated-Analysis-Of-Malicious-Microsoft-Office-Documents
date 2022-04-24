@@ -127,7 +127,6 @@ Các siêu tham số của mỗi mô hình được điều chỉnh bằng tìm 
 Tất cả các thử nghiệm của chúng tôi đều được thực hiện trên một hệ thống được trang bị NVIDIA TITAN Xp PG611-c00 để tăng tốc độ tính toán, trong khi chúng tôi sử dụng các triển khai của thư viện scikit-learning4. Chúng tôi đánh giá hiệu suất của các bộ phân loại được đào tạo bằng cách sử dụng các chỉ số phân loại tiêu chuẩn về độ chính xác, độ thu hồi, độ chính xác và điểm F1. Kết quả đạt được của mỗi mô hình được tóm tắt trong Bảng 8. Có thể thấy, kết quả thu được khi xem xét các chỉ số phân loại tiêu chuẩn cho tất cả các bộ phân loại là gần 100%, với Random Forest và MLP thể hiện hiệu suất tốt nhất so với hai loại còn lại các mô hình. Hơn nữa, các giá trị thấp của độ lệch chuẩn cho tất cả các bộ phân loại cho thấy mức độ mạnh mẽ của các kết quả thử nghiệm
 
 https://scikit-learn.org/stable/
-
 <br><br>
 Theo Bảng 7 và 8, chúng tôi nhận thấy rằng kết quả tốt nhất đạt được khi chỉ sử dụng một tập hợp con các tính năng của hệ thống của chúng tôi. Do đó, chúng tôi đã nghiên cứu mức độ liên quan của các tính năng trong Random Forest, XGBoost và mô hình SVC, được mô tả trong Hình 7. Như có thể quan sát thấy, một tập hợp con chung các tính năng có mức độ liên quan đáng kể trong cả ba mô hình. Đặc biệt, chúng tôi nhận thấy rằng autopen, shell, createobject, base64 string và document_open là những tính năng phù hợp nhất trong cả ba mô hình
 
