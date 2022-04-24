@@ -117,12 +117,10 @@ Ngoài phân tích trước đó, chúng tôi đã thu thập các lệnh gọi 
 Với các mẫu được thu thập bằng cách sử dụng phương pháp được trình bày trong Phần 3, chúng tôi đã tính toán một tập hợp các tính năng nhị phân được mô tả trong Bảng 6. Chúng tôi đánh giá sức mạnh của các tính năng được đề xuất của chúng tôi để phân biệt giữa các mẫu độc hại và lành tính (tức là phân loại nhị phân). Chúng tôi đã chọn một tập hợp các phương pháp học máy để tận dụng nhiệm vụ phân loại nhị phân. Cụ thể hơn, chúng tôi đã sử dụng Random Forest, một bộ phân loại tập hợp không tham số, XGBoost; triển khai cây quyết định được tăng cường độ dốc, Bộ phân loại vectơ hỗ trợ (SVC) và bộ phân loại Perceptron (MLP) nhiều lớp
 
 ![image](https://user-images.githubusercontent.com/62002485/164991038-5a885af4-4a7c-4ffd-90f6-33745f57d37e.png)
-
 <br>
 Các siêu tham số của mỗi mô hình được điều chỉnh bằng tìm kiếm lưới để tối đa hóa hiệu suất phân loại trong nhiệm vụ phân biệt giữa các mẫu lành tính và độc hại. Bảng 7 tóm tắt các thông số cấu hình đạt được hiệu suất cao nhất. Trong trường hợp của cả Random Forest và XGBoost, chúng tôi nhận thấy rằng số lượng tối đa các tính năng được sử dụng cho nhiệm vụ phân loại thấp hơn nhiều so với tổng số các tính năng được tính cho mỗi tệp (tức là chúng tôi đã tính toán 40 tính năng khác nhau, xem Bảng 6), sẽ được thảo luận sau trong phần này. Trong trường hợp của mô hình SVC, chúng tôi đã sử dụng hạt nhân hàm cơ sở xuyên tâm (rbf). Trong tất cả các thử nghiệm, chúng tôi sử dụng xác thực chéo 10 lần tiêu chuẩn và lặp lại thí nghiệm đó ba lần để có được ước tính gần như không thiên vị về hiệu suất của các mô hình dự đoán mà chúng tôi đã đào tạo.
 
 ![image](https://user-images.githubusercontent.com/62002485/164991153-51f14be1-7923-4694-9589-83efa7e23164.png)
-
 <br><br>
 Tất cả các thử nghiệm của chúng tôi đều được thực hiện trên một hệ thống được trang bị NVIDIA TITAN Xp PG611-c00 để tăng tốc độ tính toán, trong khi chúng tôi sử dụng các triển khai của thư viện scikit-learning4. Chúng tôi đánh giá hiệu suất của các bộ phân loại được đào tạo bằng cách sử dụng các chỉ số phân loại tiêu chuẩn về độ chính xác, độ thu hồi, độ chính xác và điểm F1. Kết quả đạt được của mỗi mô hình được tóm tắt trong Bảng 8. Có thể thấy, kết quả thu được khi xem xét các chỉ số phân loại tiêu chuẩn cho tất cả các bộ phân loại là gần 100%, với Random Forest và MLP thể hiện hiệu suất tốt nhất so với hai loại còn lại các mô hình. Hơn nữa, các giá trị thấp của độ lệch chuẩn cho tất cả các bộ phân loại cho thấy mức độ mạnh mẽ của các kết quả thử nghiệm
 <br><br>
