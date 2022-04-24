@@ -96,3 +96,47 @@ Trong số nhiều khả năng của nó, nó cho phép tạo các tải trọng
 <br>Trong trường hợp tệp độc hại, chúng tôi đã sử dụng ba kho lưu trữ nổi tiếng, đó là AppAny, Virusign và Malshare để thu thập các mẫu của chúng tôi. Hơn nữa, chúng tôi đã sử dụng VirusTotal để thu thập thêm một số thông tin về mẫu của chúng tôi. Chính xác hơn, chúng tôi đã thu thập thông tin về tỷ lệ phát hiện của các sản phẩm chống vi-rút khác nhau trên các tài liệu này cũng như thông tin bổ sung về các lệnh gọi DNS mà các mẫu này đã thực hiện.
 - Phân tích tài liệu Trong giai đoạn thứ hai, chúng tôi phân tích tài liệu của chúng tôi theo cách tĩnh và động. Trong phân tích tĩnh của chúng tôi, chúng tôi đã trích xuất tất cả siêu dữ liệu có thể sử dụng oletools Lagadec và ExifTool Harvey, sau đó trích xuất mã VBA bằng oletools. Trong phân tích động của chúng tôi, chúng tôi đã thực thi tất cả các mẫu trong môi trường hộp cát thu thập tất cả các hành động PowerShell, tất cả các quy trình đã được mở và tất cả các yêu cầu DNS đã được thực hiện. Hơn nữa, đối với mỗi tập lệnh PowerShell được thu thập, chúng tôi đã cố gắng thực hiện giải mã tự động
 - Trích xuất tính năng & phân tích tổng hợp Tất cả thông tin thu thập nói trên được lưu trữ ở định dạng JSON để tạo điều kiện xử lý cho giai đoạn cuối cùng. Trong giai đoạn cuối cùng này, chúng tôi đã thực hiện phân tích kỹ lưỡng các kết quả, cố gắng trích xuất một số đặc điểm hành vi và tĩnh mà mẫu của chúng tôi thể hiện. Ví dụ: chúng tôi muốn xác định các phương pháp và hành động được sử dụng phổ biến nhất được sử dụng trong VBA và PowerShell từ các tài liệu này. Hơn nữa, chúng tôi muốn xác định xem liệu các tài liệu có đang sử dụng các khai thác cụ thể hay không. Cuối cùng, chúng tôi đã khám phá các mối quan hệ mà các mẫu này có liên quan đến các lệnh gọi DNS mà chúng đã thực hiện.
+
+## 4. Dataset exploration:
+
+Ngoài 2736 mẫu lành tính được thu thập theo phương pháp được báo cáo trong Phần 3, bộ dữ liệu của chúng tôi bao gồm 15571 mẫu độc hại có từ năm 2006 đến năm 2020 theo ngày ghi được thu thập thông qua VirusTotal, AppAny, Virusign và Malshare. Theo tên gốc tương ứng của chúng, mẫu bao gồm 13518 tài liệu Word, 1996 Excel
+bảng tính và 13 bài thuyết trình Powerpoint. Trong VirusTotal, 15571 đã được quét với 14264 tệp trong số này được báo cáo là độc hại bởi ít nhất một phần mềm chống vi-rút (AV). Lưu ý rằng không có tệp nào được chia sẻ chính thức được báo cáo là độc hại. Tuy nhiên, các báo cáo cho thấy sự khác biệt lớn về số lượng antivirus phát hiện ra chúng và loại vi rút nào tại mỗi thời điểm. Tuy nhiên, cần lưu ý rằng các kết quả này đề cập đến lần quét cuối cùng chứ không phải lần quét đầu tiên, vì trung bình mỗi tài liệu đã được quét 9,39 lần sau khi người dùng gửi. Thực tế, điều này có nghĩa là một số AV liên tục không gắn cờ chúng là độc hại. Như được minh họa trong Hình 4, có rất nhiều khác biệt trong các kết quả được báo cáo của các AV. Tuy nhiên, những kết quả này có thể là do chữ ký được chia sẻ hoặc các cách tiếp cận khác nhau, ví dụ: hành vi thời gian chạy. Nói chung, vì người dùng có thể gửi tệp tới VirusTotal để quét, nên hiển nhiên là họ sẽ nhận được nhiều báo cáo với các kết quả khác nhau tùy theo độ chính xác của kết quả được báo cáo của tất cả các AV tại thời điểm quét.
+<br><br>
+Về siêu dữ liệu, do có nhiều định dạng khác nhau, chúng tôi trình bày thống kê tương ứng trong Bảng 2. Rõ ràng là trong khi có nhiều tài liệu mà siêu dữ liệu và nội dung chưa được quan tâm, ví dụ: chúng không có bất kỳ nội dung nào bên trong, có số lượng chỉnh sửa thấp, v.v., trong hầu hết các trường hợp, tác giả phần mềm độc hại đã thực hiện các biện pháp để hiển thị một số hành động có liên quan và làm cho chúng thực tế hơn. Từ các mẫu, 15.021 mã VBA nhúng được trích xuất bằng các oletools. Các thống kê và tính năng khác nhau được thu thập từ các tệp này được mô tả trong Bảng 3. Về vấn đề này, chúng tôi báo cáo kích thước của mã VBA, khi mã VBA được thực thi, lệnh shell đã được sử dụng bao nhiêu lần, bao nhiêu mẫu đã sử dụng chuỗi Base64, hoặc có bao nhiêu người cố gắng ghi dữ liệu vào một tệp. Hơn nữa, trong Hình 5, chúng tôi trình bày một đoạn của đồ thị minh họa sự liên kết giữa các mẫu và các miền mà chúng đã cố gắng kết nối với nhau. Đáng chú ý, như được minh họa trong Hình 6, hầu hết các miền được xác định đều được VirusTotal coi là vô hại. Điều thứ hai có thể được cho là do kết nối với một số miền thực sự lành tính để thu thập dữ liệu, thông tin xác thực, v.v. hoặc thậm chí là các miền bị xâm phạm tạm thời nơi các tệp thực thi độc hại có thể đã được đưa vào. Ví dụ: pastebin không phải là một dịch vụ độc hại nhưng thường được sử dụng để kết xuất thông tin xác thực trong khi các dịch vụ của Google, vì chúng được đưa vào danh sách trắng nên chúng thường bị khai thác hoặc sử dụng để lấy thông tin nhạy cảm của người dùng.
+<br><br>
+Ngoài phân tích trước đó, chúng tôi đã thu thập các lệnh gọi hệ thống được thực hiện bởi Living Off The Land Binaries từ các tập lệnh PowerShell có trong tệp tập dữ liệu trong Bảng 4 và phân tích PSDecode3 (một công cụ giải mã cho PowerShell) trong Bảng 5. Như nó có thể được quan sát từ cả hai bảng, CMD.EXE xuất hiện nhiều lần vì nhiệm vụ thực tế là tải xuống tệp từ Internet và thực thi tệp. Lưu ý rằng việc sử dụng LOLBAS ngụ ý rằng sẽ không có cảnh báo nào được đưa ra cho người dùng.
+
+![image](https://user-images.githubusercontent.com/62002485/164990808-afcbbec9-ea9a-4791-b5c7-e650279b7afc.png)
+
+![image](https://user-images.githubusercontent.com/62002485/164990871-45868390-05c3-44bd-9628-e2293eaba835.png)
+
+![image](https://user-images.githubusercontent.com/62002485/164990880-0cd33f2f-f036-47da-aea9-b4fa7b047701.png)
+
+## 5. Experiments:
+
+Với các mẫu được thu thập bằng cách sử dụng phương pháp được trình bày trong Phần 3, chúng tôi đã tính toán một tập hợp các tính năng nhị phân được mô tả trong Bảng 6. Chúng tôi đánh giá sức mạnh của các tính năng được đề xuất của chúng tôi để phân biệt giữa các mẫu độc hại và lành tính (tức là phân loại nhị phân). Chúng tôi đã chọn một tập hợp các phương pháp học máy để tận dụng nhiệm vụ phân loại nhị phân. Cụ thể hơn, chúng tôi đã sử dụng Random Forest, một bộ phân loại tập hợp không tham số, XGBoost; triển khai cây quyết định được tăng cường độ dốc, Bộ phân loại vectơ hỗ trợ (SVC) và bộ phân loại Perceptron (MLP) nhiều lớp
+
+![image](https://user-images.githubusercontent.com/62002485/164991038-5a885af4-4a7c-4ffd-90f6-33745f57d37e.png)
+
+<br>
+Các siêu tham số của mỗi mô hình được điều chỉnh bằng tìm kiếm lưới để tối đa hóa hiệu suất phân loại trong nhiệm vụ phân biệt giữa các mẫu lành tính và độc hại. Bảng 7 tóm tắt các thông số cấu hình đạt được hiệu suất cao nhất. Trong trường hợp của cả Random Forest và XGBoost, chúng tôi nhận thấy rằng số lượng tối đa các tính năng được sử dụng cho nhiệm vụ phân loại thấp hơn nhiều so với tổng số các tính năng được tính cho mỗi tệp (tức là chúng tôi đã tính toán 40 tính năng khác nhau, xem Bảng 6), sẽ được thảo luận sau trong phần này. Trong trường hợp của mô hình SVC, chúng tôi đã sử dụng hạt nhân hàm cơ sở xuyên tâm (rbf). Trong tất cả các thử nghiệm, chúng tôi sử dụng xác thực chéo 10 lần tiêu chuẩn và lặp lại thí nghiệm đó ba lần để có được ước tính gần như không thiên vị về hiệu suất của các mô hình dự đoán mà chúng tôi đã đào tạo.
+
+![image](https://user-images.githubusercontent.com/62002485/164991153-51f14be1-7923-4694-9589-83efa7e23164.png)
+
+<br><br>
+Tất cả các thử nghiệm của chúng tôi đều được thực hiện trên một hệ thống được trang bị NVIDIA TITAN Xp PG611-c00 để tăng tốc độ tính toán, trong khi chúng tôi sử dụng các triển khai của thư viện scikit-learning4. Chúng tôi đánh giá hiệu suất của các bộ phân loại được đào tạo bằng cách sử dụng các chỉ số phân loại tiêu chuẩn về độ chính xác, độ thu hồi, độ chính xác và điểm F1. Kết quả đạt được của mỗi mô hình được tóm tắt trong Bảng 8. Có thể thấy, kết quả thu được khi xem xét các chỉ số phân loại tiêu chuẩn cho tất cả các bộ phân loại là gần 100%, với Random Forest và MLP thể hiện hiệu suất tốt nhất so với hai loại còn lại các mô hình. Hơn nữa, các giá trị thấp của độ lệch chuẩn cho tất cả các bộ phân loại cho thấy mức độ mạnh mẽ của các kết quả thử nghiệm
+<br><br>
+Theo Bảng 7 và 8, chúng tôi nhận thấy rằng kết quả tốt nhất đạt được khi chỉ sử dụng một tập hợp con các tính năng của hệ thống của chúng tôi. Do đó, chúng tôi đã nghiên cứu mức độ liên quan của các tính năng trong Random Forest, XGBoost và mô hình SVC, được mô tả trong Hình 7. Như có thể quan sát thấy, một tập hợp con chung các tính năng có mức độ liên quan đáng kể trong cả ba mô hình. Đặc biệt, chúng tôi nhận thấy rằng autopen, shell, createobject, base64 string và document_open là những tính năng phù hợp nhất trong cả ba mô hình
+
+![image](https://user-images.githubusercontent.com/62002485/164991213-841875ff-0f27-43bc-a7f6-1e9b08d24a8e.png)
+
+![image](https://user-images.githubusercontent.com/62002485/164991219-21dfa4ad-fcbb-413d-84d6-3f64546affba.png)
+
+![image](https://user-images.githubusercontent.com/62002485/164991233-a1d5ceb0-a2ce-4656-b860-56b5ca89a2a6.png)
+
+
+
+
+
+
+
