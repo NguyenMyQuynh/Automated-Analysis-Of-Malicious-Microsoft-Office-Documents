@@ -1,5 +1,5 @@
 ## XML
-<br>https://www.w3schools.com/xml/default.asp
+https://www.w3schools.com/xml/default.asp
 
 - MS Office hỗ trợ một số định dạng tài liệu; tuy nhiên, cốt lõi của hầu hết các tài liệu là XML(Extensible Markup Language). 
 - XML là một dạng ngôn ngữ đánh dấu, để xác định cú pháp mã hóa tài liệu giúp con người, máy móc có thể đọc được. Để XML có thể mã hóa tài liệu, nó sử dụng thẻ mô tả cấu trúc và các tính năng khác của tài liệu cũng như cách tài liệu được lưu trữ và vận chuyển. 
@@ -67,6 +67,8 @@
 ```
 
 <br>
+
+##  Open XML(OpenXML/OOXML):
   
 Kể từ MS Office 2007, MS đã áp dụng định dạng Office Open XML, còn được gọi là định dạng OpenXML hoặc OOXML, cho phép khả năng tương tác với các bộ và phần mềm xử lý tương tự khác. Định dạng Office Open XML dựa trên XML và đã được ECMA International áp dụng với tên gọi ECMA-376 (Ecma International, 2006) và trở thành tiêu chuẩn quốc tế (ISO / IEC 29500) (International Organization for Standardization, 2016).
 
