@@ -1,12 +1,15 @@
 ## XML
-
-https://topdev.vn/blog/xml-la-gi/
 <br>https://www.w3schools.com/xml/default.asp
 
-MS Office hỗ trợ một số định dạng tài liệu; tuy nhiên, cốt lõi của hầu hết các tài liệu là XML(Extensible Markup Language). Đây là một dạng ngôn ngữ đánh dấu, để xác định cú pháp mã hóa tài liệu giúp con người, máy móc có thể đọc được. Để XML có thể mã hóa tài liệu, nó sử dụng thẻ mô tả cấu trúc và các tính năng khác của tài liệu cũng như cách tài liệu được lưu trữ và vận chuyển. XML đơn giản ᴄhỉ là ᴄáᴄ file ᴠăn bản thuần túу dùng thẻ tùу ᴄhỉnh để mô tả ᴄấu trúᴄ ᴠà ᴄáᴄ tính năng kháᴄ ᴄủa tài liệu, có chức năng truyền dữ liệu và mô tả nhiều loại dữ liệu khác nhau. Mục đích chính của XML là đơn giản hóa việc chia sẻ dữ liệu giữa các platform và các hệ thống được kết nối với mạng Internet. Chính vì vậy, XML có tác dụng rất lớn trong việc chia sẻ, trao đổi dữ liệu giữa các hệ thống. Ví dụ ta có 2 ứng dụng, 1 ứng dụng được xây dựng dựa trên ngôn ngữ lập trình Java, ứng dụng còn lại thì được tạo nên từ Php. Vậy thì hai ứng dụng này hoàn toàn không thể kết nối với nhau được. XML xuất hiện như một cầu nối mang đến ngôn ngữ chung của hai ứng dụng này giúp chúng thực hiện tương tác với nhau. 
+- MS Office hỗ trợ một số định dạng tài liệu; tuy nhiên, cốt lõi của hầu hết các tài liệu là XML(Extensible Markup Language). 
+- XML là một dạng ngôn ngữ đánh dấu, để xác định cú pháp mã hóa tài liệu giúp con người, máy móc có thể đọc được. Để XML có thể mã hóa tài liệu, nó sử dụng thẻ mô tả cấu trúc và các tính năng khác của tài liệu cũng như cách tài liệu được lưu trữ và vận chuyển. 
+- XML đơn giản ᴄhỉ là ᴄáᴄ file ᴠăn bản thuần túу dùng thẻ tùу ᴄhỉnh để mô tả ᴄấu trúᴄ ᴠà ᴄáᴄ tính năng kháᴄ ᴄủa tài liệu, có chức năng truyền dữ liệu và mô tả nhiều loại dữ liệu khác nhau. Mục đích chính của XML là đơn giản hóa việc chia sẻ dữ liệu giữa các platform và các hệ thống được kết nối với mạng Internet. Chính vì vậy, XML có tác dụng rất lớn trong việc chia sẻ, trao đổi dữ liệu giữa các hệ thống. Ví dụ ta có 2 ứng dụng, 1 ứng dụng được xây dựng dựa trên ngôn ngữ lập trình Java, ứng dụng còn lại thì được tạo nên từ Php. Vậy thì hai ứng dụng này hoàn toàn không thể kết nối với nhau được. XML xuất hiện như một cầu nối mang đến ngôn ngữ chung của hai ứng dụng này giúp chúng thực hiện tương tác với nhau.
+- So sánh XML với HTML: 
+  - Ngôn ngữ XML không có thẻ được xác định trước. Các thẻ trong ví dụ bên dưới (như <to> và <from>) không được định nghĩa trong bất kỳ tiêu chuẩn XML nào. Các thẻ này được "phát minh" bởi tác giả của tài liệu XML. HTML hoạt động với các thẻ được xác định trước như `<p>`, `<h1>`, `<table>`, ... Với XML, tác giả phải xác định cả thẻ và cấu trúc tài liệu.
+  - XML được thiết kế để chuyển tải và lưu trữ dữ liệ, HTML được thiết kế để hiển thị dữ liệu
 
 
-Ví dụ:
+- Ví dụ mã XML:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <note>
@@ -63,7 +66,8 @@ Ví dụ:
 </breakfast_menu>
 ```
 
-
+<br>
+  
 Kể từ MS Office 2007, MS đã áp dụng định dạng Office Open XML, còn được gọi là định dạng OpenXML hoặc OOXML, cho phép khả năng tương tác với các bộ và phần mềm xử lý tương tự khác. Định dạng Office Open XML dựa trên XML và đã được ECMA International áp dụng với tên gọi ECMA-376 (Ecma International, 2006) và trở thành tiêu chuẩn quốc tế (ISO / IEC 29500) (International Organization for Standardization, 2016).
 
 - https://www.loc.gov/preservation/digital/formats/fdd/fdd000397.shtml
