@@ -6,6 +6,7 @@ Ngoài VBA, người ta có thể thực hiện các tác vụ tương tự bằ
 Khi người dùng mở một tệp độc hại với MS Office, kẻ thù sẽ sử dụng trình kích hoạt để khởi chạy một tập lệnh VBA 
 (ví dụ: orkbook_Open (), AutoOpen () và chức năng AutoClose ()) hoặc tự động đánh giá các giá trị động của tài liệu được liên kết với DDE
 Mặc dù mã có thể thực hiện một số tác vụ, trong hầu hết các chiến dịch, mã sẽ tải xuống một tải trọng từ Internet hoặc trích xuất nó từ chính tài liệu.
+Các phiên bản Windows dưới dạng tệp đã tải xuống sẽ không được ký bởi cơ quan đáng tin cậy. Do đó, Kiểm soát tài khoản người dùng (UAC) của Windows sẽ yêu cầu sự đồng ý rõ ràng của người dùng để cho phép thực thi tệp. Vì người dùng rất có thể sẽ từ chối yêu cầu đó, các tài liệu độc hại có thể sử dụng LOLBAS để thực thi tải trọng độc hại và lây nhiễm sang máy chủ lưu trữ một cách liền mạch.
 
 Dự án Living off the Land Binaries and Scripts (LOLBAS) nhằm mục đích ghi lại tất cả các tập lệnh và mã nhị phân đã được Microsoft ký kết bao gồm chức năng cho các nhóm APT trong các cuộc tấn công của Living off the Land. Cho đến nay, có 135 công cụ hệ thống trong danh sách này dễ bị lạm dụng, mỗi công cụ hỗ trợ một mục tiêu khác nhau. Đó có thể là việc tạo tài khoản người dùng mới, nén và lọc dữ liệu, thu thập thông tin hệ thống, khởi chạy các quy trình trên một điểm đến mục tiêu hoặc thậm chí là vô hiệu hóa các dịch vụ bảo mật.
 
