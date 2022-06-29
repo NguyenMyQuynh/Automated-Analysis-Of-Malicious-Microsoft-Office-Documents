@@ -81,7 +81,7 @@ Kể từ MS Office 2007, MS đã áp dụng định dạng Office Open XML, cò
 - *_rels is a Relationships folder, containing a single file .rels (which may be hidden from file listings, depending on operating system and settings). It lists and links to the key parts in the package, using URIs to identify the type of relationship of each key part to the package. In particular it specifies a relationship to word/document.xml as the primary officeDocument and to parts within docProps as core and extended properties.*
 - *docProps is a folder that contains properties for the document as a whole, typically including a set of core properties, a set of extended or application-specific properties, and a thumbnail preview for the document.*
 - *[Content_Types].xml is a file part, a mandatory part in any OPC package, that lists the content types (using MIME Internet Media Types as defined in RFC 6838) for parts within the package.*
-*The word folder contains at a minimum document.xml and files and subsidiary folders that support presentation styles and themes. Headers and footers are stored in separate parts if present. The minimal structure for document.xml will include a nested set of elements:*
+- *The word folder contains at a minimum document.xml and files and subsidiary folders that support presentation styles and themes. Headers and footers are stored in separate parts if present. The minimal structure for document.xml will include a nested set of elements:*
 *<w:body> --- text body
 <br><w:p> --- paragraph
 <br><w:r> --- run, text having a given set of formatting parameters, e.g., font face and size, regular, bold or italic, etc.
